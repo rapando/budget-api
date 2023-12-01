@@ -36,12 +36,12 @@ jobs:
 #      - name: Test
 #        run: go test -v ./...
 
-      - name: Release
-        uses: goreleaser/goreleaser-action@v4
-        with:
-          version: latest
-          args: release --clean
-          distribution: goreleaser
-        env:
-          GITHUB_TOKEN : ${{ secrets.budget-api-release }}
+#      - name: Release
+#        uses: goreleaser/goreleaser-action@v4
+#        with:
+#          version: latest
+#          args: release --clean
+#          distribution: goreleaser
+#        env:
+#          GITHUB_TOKEN : ${{ secrets.budget-api-release }}
 

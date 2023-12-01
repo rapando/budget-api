@@ -1,0 +1,10 @@
+version: '3'
+services:
+  budget_api:
+    build: .
+    container_name: budget_api
+    network_mode: host
+    env_file:
+      - ./.env
+    volumes:
+      - /apps/logs/budget-api:/app/logs

@@ -9,7 +9,7 @@ import (
 )
 
 func InitLogger(env string) {
-	var path = "/apps/logs/budget-api"
+	var path = "/app/logs/budget-api"
 	log.SetFlags(0)
 	if env == "dev" {
 		log.SetOutput(os.Stdout)
