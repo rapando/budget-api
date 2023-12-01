@@ -40,7 +40,7 @@ jobs:
         uses: goreleaser/goreleaser-action@v4
         with:
           version: latest
-          args: release --rm-dist
+          args: release --clean
           distribution: goreleaser
         env:
           GITHUB_TOKEN : ${{ secrets.budget-api-release }}
