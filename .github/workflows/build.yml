@@ -2,9 +2,13 @@ name: Build Budget API
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - "main"
+    tags:
+      - "v*"
   pull_request:
-    branches: [ "main" ]
+    branches:
+      - "main"
   release:
     types:
       - created
@@ -31,3 +35,13 @@ jobs:
 #
 #      - name: Test
 #        run: go test -v ./...
+
+      - name: Release
+        uses: goreleaser/goreleaser-action@v4
+        with:
+          version: latest
+          args: release --rm-dist
+          distribution: goreleaser
+        env:
+          GITHUB_TOKEN : ${{ secrets.budget-api-release }}
+
