@@ -1,4 +1,4 @@
-FROM go:latest
+FROM golang:1.21.4-alpine
 
 WORKDIR /app
 RUN mkdir -p /app/logs
